@@ -6,8 +6,12 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+    }
+);
 
-app.post('/bhfl', async (req, res) => {
+app.post('/bfhl', async (req, res) => {
   try {
    
     const data = req.body;
@@ -19,7 +23,7 @@ app.post('/bhfl', async (req, res) => {
     const fullName = "Dhruv Arora"; 
     const dob = "21082003"; 
     const email = "dhruv2073.be21@chitkara.edu.in"; 
-    const collegeRollNumber = "2110990273"; 
+    const collegeRollNumber = "2110992073"; 
 
    
     const userId = `${fullName.toLowerCase().replace(/\s/g, '_')}_${dob}`;
