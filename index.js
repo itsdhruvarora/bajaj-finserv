@@ -7,14 +7,14 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.json('Hello World!');
     }
 );
 
 app.post('/bfhl', async (req, res) => {
   try {
-   
-    const data = req.body;
+   console.log("HIT");
+    const {data} = req.body;
 
     if (!data) {
       return res.status(400).json({ is_success: false, message: 'No data provided' });
